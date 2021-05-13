@@ -26,20 +26,22 @@ get_header();
         <?php endwhile; // End of the loop.
         ?>
     </div><!-- #main -->
+    <a href="#introduction"><div class="arrow"></div></a>
 </main><!-- #primary -->
-<section class="introduction">
+<section class="introduction" id="introduction">
     <div class="site-content">
         <?php query_posts('post_category=homepage'); ?>
         <?php while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>
         <?php endwhile; ?>
         <?php wp_reset_query(); ?>
+        <a href="#nominees"><div class="arrow"></div></a>
     </div>
 </section>
 
-<section class="nominees">
+<section class="nominees" id="nominees">
 	<div class="site-content">
-		<h4>Nominees</h4>
+		<h2>Nominees</h2>
 		<ul class="homepage-nominees">
 			<?php query_posts('posts_per_page=3&post_type=nominees'); ?>
 			<?php while (have_posts()) : the_post();
@@ -62,10 +64,11 @@ get_header();
 			<?php endwhile; ?>
 			<?php wp_reset_query(); ?>
 		</ul>
+        <a href="#gallery"><div class="arrow"></div></a>
 	</div>
 </section>
 
-<section class="gallery">
+<section class="gallery" id="gallery">
         <a class="button" href="https://paosanchezmedia.pixieset.com/emeraldcitysupperclub/" target="_blank">Past Suppers</a>
 </section>
 

@@ -388,6 +388,7 @@ template {
 
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
@@ -539,12 +540,12 @@ table {
 a:visited {
 	color: #800080;
 } */
-
+/* 
 a:hover,
 a:focus,
 a:active {
 	color: #191970;
-}
+} */
 
 a:focus {
 	outline: thin dotted;
@@ -990,6 +991,10 @@ textarea {
 	margin: 0 auto;
    }
 
+   .site-content {
+	padding: 70px 0;
+   }
+
 
 /* Header */
 .site-header {
@@ -1060,11 +1065,28 @@ textarea {
 	background: #fff;
 }
 
+.arrow {
+	width: 40px;
+  	height: 40px;
+  	top: 50%;
+  	transform: rotate(45deg);
+	margin: auto;
+  	border-left: none;
+  	border-top: none;
+  	border-right: 10px #fff solid;
+  	border-bottom: 10px #fff solid;
+}
+
+.introduction .arrow {
+	border-right: 10px #404040 solid;
+  	border-bottom: 10px #404040 solid;
+}
+
 .introduction {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 70px 0;
+	padding: 70px 0;
 }
 
 
@@ -1106,8 +1128,8 @@ textarea {
 	align-items: center;
 	flex-direction: column;
 	background: url("img/past-2.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
-	min-height: 66vh;
-	margin: 25px;
+	min-height: 80vh;
+	margin: 30px;
 }
 
 .event-gallery .button {
@@ -1117,4 +1139,42 @@ textarea {
 
 .faq-content {
 	margin: 15px;
+}
+
+.about-page {
+    background: url("img/about.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+    height: auto;
+    margin: 0;
+    padding: 8em 0;
+	text-align: center;
+}
+
+#about .main-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	min-height: 60vh;
+	text-align: left;
+}
+
+.about-page #hero-text {
+	margin-left: 70px;
+	background: none;
+}
+
+.about-page h3 {
+	font-size: 2.5em;
+}
+
+.site-content h2 {
+	font-size: 2.1em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.site-content p {
+	font-size: 1.2em;
+	line-height: 180%;
 }
