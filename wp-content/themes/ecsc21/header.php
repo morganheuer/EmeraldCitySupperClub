@@ -28,10 +28,10 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'ecsc'); ?></a>
 
 		<header id="masthead" class="site-header">
-
-
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'ecsc'); ?></button>
+				<label for="hamburger">&#9776;</label>
+				<input type="checkbox" id="hamburger"/>
+				<div id="hamitems">
 				<?php
 				wp_nav_menu(
 					array(
@@ -40,5 +40,6 @@
 					)
 				);
 				?>
+				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->

@@ -656,6 +656,19 @@ textarea {
 	width: 100%;
 }
 
+#site-navigation label, #hamburger {
+	display: none;
+}
+
+#hamitems {
+	display: flex;
+}
+
+#hamitems a {
+	width: 20%;
+	padding: 10px;
+}
+
 .main-navigation ul {
 	display: block;
 	list-style: none;
@@ -709,11 +722,14 @@ textarea {
 	padding: 5px 15px;
 }
 
+
+
+
 /* Small menu. */
-.menu-toggle,
+/* .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-}
+} */
 
 @media screen and (min-width: 37.5em) {
 
@@ -1107,6 +1123,7 @@ textarea {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	flex-flow: row nowrap;
 	margin: 0;
 	padding: 0;
 }
@@ -1178,3 +1195,51 @@ textarea {
 	font-size: 1.2em;
 	line-height: 180%;
 }
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+	/* Show Hamburger Icon */
+	.main-navigation {
+		display: block;
+	}
+	
+	#site-navigation label { 
+	  display: inline-block; 
+	  color: white;
+	  /* background: #a02620; */
+	  font-style: normal;
+	  font-size: 1.2em;
+	  padding: 10px;
+	}
+  
+	/* Break down menu items into vertical */
+	#hamitems a {
+	  box-sizing: border-box;
+	  display: block;
+	  width: 100%;
+	  border-top: 1px solid #333;
+	}
+  
+	/* Toggle Show/Hide Menu */
+	#hamitems { display: none; }
+	#site-navigation input:checked ~ #hamitems { display: block; }
+
+	.nominees ul {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.individual-nominee {
+		width: auto;
+	}
+	
+	#about .main-content {
+		background: rgba(40, 54, 24, 0.5);
+		min-height: auto;
+	}	
+
+	.about-page {
+		height: 80vh;
+		background: url(img/about.jpg) no-repeat scroll center / cover rgba(0, 0, 0, 0);
+	}
+  }
