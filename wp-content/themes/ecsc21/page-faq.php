@@ -18,6 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
     <div class="site-content">
         <h2>Frequently Asked Questions</h2>
+        <br>
         <?php query_posts('post_type=faqs'); ?>
 		<?php while ( have_posts() ) : the_post();
             $question = get_field('question');
@@ -25,8 +26,8 @@ get_header();
         ?>
             <div class="faq-content">
                 <div class="faq">
-                    <h2><?php echo $question; ?></h2>
-                    <h4><?php echo $answer; ?></h5>
+                    <p><strong><?php echo $question; ?></strong></p>
+                    <p><?php echo $answer; ?></p>
                 </div>
             </div>
 
